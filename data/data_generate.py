@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import random
 
-def generate_real_estate_data_final_v2(num_samples=10000):
+def generate_real_estate_data(num_samples=10000):
     """
     Hàm này tạo ra DataFrame với 10000 mẫu dữ liệu bất động sản theo tất cả các yêu cầu.
     Giá cuối cùng được điều chỉnh dựa trên tình trạng nhà và nội thất, sau đó làm tròn.
@@ -132,12 +132,12 @@ def generate_real_estate_data_final_v2(num_samples=10000):
     return df
 
 # Chạy hàm để tạo DataFrame
-df_generated = generate_real_estate_data_final_v2(num_samples=10000)
+df_generated = generate_real_estate_data(num_samples=10000)
 
 # Hiển thị 5 dòng dữ liệu đầu tiên
 print("5 dòng dữ liệu đầu tiên:")
 print(df_generated.head())
 
 # Lưu dữ liệu ra file CSV nếu cần
-# df_generated.to_csv('generated_real_estate_data_final.csv', index=False)
-# print("\nĐã lưu dữ liệu ra file 'generated_real_estate_data_final.csv'")
+df_generated.to_csv('generated_real_estate_data_final.csv', index=False)
+print("\nĐã lưu dữ liệu ra file 'generated_real_estate_data_final.csv'")

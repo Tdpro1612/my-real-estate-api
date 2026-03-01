@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "my-real-estable-api"
+version = "0.1.0"
+description = ""
+authors = ["tdpro1612 <hangthieulong508@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+flask = "^3.0.3"
+flask-sqlalchemy = "^3.1.1"
+pymysql = "^1.1.0"
+pandas = "^2.3.2"
+fastapi = "^0.119.0"
+uvicorn = {extras = ["standard"], version = "^0.37.0"}
+python-multipart = "^0.0.20"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.9.0"
+isort = "^7.0.0"
+flake8 = "^7.3.0"
+mypy = "^1.18.2"
+
